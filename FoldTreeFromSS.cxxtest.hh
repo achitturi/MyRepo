@@ -107,32 +107,24 @@ core::kinematics::FoldTree fold_tree_from_ss(core::pose::Pose const & mypose) {
 }
 
 
-// --------------- Test Class --------------- //
+//  Test Class  //
 
 class FoldTreeFromSSTests : public CxxTest::TestSuite {
 
 public:
 
 
-	// --------------- Fixtures --------------- //
+	//  Fixtures  //
 
-	// Define a test fixture (some initial state that several tests share)
-	// In CxxTest, setUp()/tearDown() are executed around each test case. If you need a fixture on the test
-	// suite level, i.e. something that gets constructed once before all the tests in the test suite are run,
-	// suites have to be dynamically created. See CxxTest sample directory for example.
-
-
-	// Shared initialization goes here.
 	void setUp() {
 		core_init();
 	}
 
-	// Shared finalization goes here.
 	void tearDown() {
 	}
 
 
-	// --------------- Test Cases --------------- //
+	//  Test Cases  //
 
 	void test_string1() {
         utility::vector1< std::pair< core::Size, core::Size > > testing = identify_secondary_structure_spans("   EEEEE   HHHHHHHH  EEEEE   IGNOR EEEEEE   HHHHHHHHHHH  EEEEE  HHHH   ");
